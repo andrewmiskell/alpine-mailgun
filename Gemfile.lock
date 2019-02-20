@@ -28,6 +28,3 @@ DEPENDENCIES
   json
   mailgun-ruby (~> 1.1.0)
   midi-smtp-server (~> 2.2.4)
-
-BUNDLED WITH
-   1.16.3
