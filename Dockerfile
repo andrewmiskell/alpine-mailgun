@@ -1,5 +1,6 @@
 FROM alpine:latest
-MAINTAINER andrewmiskell@mac.com
+LABEL MAINTAINER="Andrew Miskell <andrewmiskell@mac.com>" \
+    Description="SMTP Server which relays all incoming mail via the Mailgun API"
 
 RUN apk update && apk --update add ruby ruby-irb ruby-io-console tzdata ca-certificates
 
