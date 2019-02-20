@@ -5,7 +5,6 @@ LABEL MAINTAINER="Andrew Miskell <andrewmiskell@mac.com>" \
 RUN apk update && apk --update add ruby ruby-irb ruby-io-console tzdata ca-certificates libcap
 
 ADD Gemfile /app/
-ADD Gemfile.lock /app/
 
 RUN apk --update add --virtual build-deps build-base ruby-dev \
     && addgroup appuser \
