@@ -2,7 +2,7 @@ FROM alpine:latest
 LABEL MAINTAINER="Andrew Miskell <andrewmiskell@mac.com>" \
     Description="SMTP Server which relays all incoming mail via the Mailgun API"
 
-RUN apk update && apk --update add ruby ruby-irb ruby-io-console tzdata ca-certificates
+RUN apk update && apk --update add ruby ruby-irb ruby-io-console tzdata ca-certificates libcap
 
 ADD Gemfile /app/
 ADD Gemfile.lock /app/
