@@ -14,13 +14,14 @@ docker run --name mail \
 
   * `MG_SMTPD_SIMULATENOUS_CONNECTIONS` can be passed to allow more than 4 simulatenous connections
   * `MG_SMTPD_OPTIONS` maps to `opts` parameter in midi-smtp-server's `Smtpd` class.
+  * `MG_SMTPD_PORT` can be passed to bind to a port other than 25
+  * `MG_SMTPD_ADDRESS` can be passed to bind the server to an address other than 0.0.0.0
 
 # License/Author/Credits
-
-Original Author: Steve Nolen (https://github.com/stevenolen/mailgun-smtp-server)
 
 License: Apache v2 (see `LICENSE` file in this repository for details)
 
 Credits: 
+  * Thanks to the original author Steve Nolen (https://github.com/stevenolen/mailgun-smtp-server)
   * Thanks to [Tom Freudenberg](http://www.4commerce.de/), [4commerce technologies AG](http://www.4commerce.de/) for the awesome, extensible and dreadfully simple smtp server.
   * Thanks to [mailgun](https://mailgun.com) for their service and ruby sdk.
