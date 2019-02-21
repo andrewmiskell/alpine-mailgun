@@ -5,3 +5,5 @@ QEMU_RELEASE=`curl -s https://api.github.com/repos/multiarch/qemu-user-static/re
 curl -O https://github.com/multiarch/qemu-user-static/releases/download/${QEMU_RELEASE}/qemu-arm-static
 
 cp qemu-arm-static /usr/bin/
+
+chmod +x /usr/bin/qemu-arm-static
