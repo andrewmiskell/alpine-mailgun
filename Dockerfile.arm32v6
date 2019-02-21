@@ -1,8 +1,9 @@
 FROM arm32v6/alpine:latest
+
 LABEL MAINTAINER="Andrew Miskell <andrewmiskell@mac.com>" \
     Description="SMTP Server which relays all incoming mail via the Mailgun API"
 
-# copy qemu-arm-static to /usr/bin to allow automated builds for arm on docker-hub    
+# copy qemu-arm-static to /usr/bin to allow automated builds for arm on docker-hub
 COPY qemu-arm-static /usr/bin
 
 # upgrade base system and install ruby and supervisord
