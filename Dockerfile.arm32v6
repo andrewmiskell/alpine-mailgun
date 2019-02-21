@@ -2,6 +2,8 @@ FROM arm32v6/alpine:latest
 LABEL MAINTAINER="Andrew Miskell <andrewmiskell@mac.com>" \
     Description="SMTP Server which relays all incoming mail via the Mailgun API"
 
+COPY qemu-arm-static /usr/bin
+
 RUN apk update && apk --update add ruby ruby-irb ruby-io-console tzdata ca-certificates libcap
 
 ADD Gemfile /app/
