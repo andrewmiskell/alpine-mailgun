@@ -4,7 +4,7 @@ LABEL MAINTAINER="Andrew Miskell <andrewmiskell@mac.com>" \
     
 COPY qemu-arm-static /usr/bin
 
-RUN apk update && apk --update add ruby ruby-irb ruby-io-console tzdata ca-certificates libcap
+RUN ["/usr/bin/qemu-arm-static", "apk update && apk --update add ruby ruby-irb ruby-io-console tzdata ca-certificates libcap" ]
 
 ADD Gemfile /app/
 

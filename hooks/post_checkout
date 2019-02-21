@@ -1,9 +1,4 @@
 #!/bin/bash
 
 QEMU_RELEASE=`curl -s https://api.github.com/repos/multiarch/qemu-user-static/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")'`
-
-curl -O https://github.com/multiarch/qemu-user-static/releases/download/${QEMU_RELEASE}/qemu-arm-static
-
-cp qemu-arm-static /usr/bin/
-
-chmod +x /usr/bin/qemu-arm-static
+curl -O https://github.com/multiarch/qemu-user-static/releases/download/${QEMU_RELEASE}/qemu-arm-static && chmod +x qemu-arm-static && cp qemu-arm-static /usr/bin/
