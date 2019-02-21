@@ -15,9 +15,12 @@ RUN apk --no-cache add --virtual build-deps build-base ruby-dev \
     && bundle install \
     && apk --no-cache del build-deps
 
-# add all other files to app directory and set permissions
-ADD . /app
+# add mail.rb to app directory and set permissions
+ADD mail.rb /app
 RUN chown -R root:root /app
+
+# copy supervisord configuration file into place
+COPY supervisord.conf /etc/supervisord.conf
 
 # expose default port 25 for mail server
 EXPOSE 25
