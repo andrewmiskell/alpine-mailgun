@@ -1,2 +1,6 @@
 #!/bin/bash
-curl -L https://github.com/multiarch/qemu-user-static/releases/download/v3.1.0-2/qemu-arm-static
+
+QEMU_RELEASE=`curl -s https://api.github.com/repos/multiarch/qemu-user-static/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")'`
+
+wget https://github.com/multiarch/qemu-user-static/releases/download/${QEMU_RELEASE}/qemu-arm-static
+#wget https://github.com/multiarch/qemu-user-static/releases/download/${QEMU_RELEASE}/qemu-armeb-static
