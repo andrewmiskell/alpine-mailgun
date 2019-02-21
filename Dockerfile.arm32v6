@@ -5,7 +5,6 @@ LABEL MAINTAINER="Andrew Miskell <andrewmiskell@mac.com>" \
 COPY qemu-arm-static /usr/bin
 COPY qemu-armeb-static /usr/bin
 
-RUN ["/usr/bin/qemu-armeb-static", "/bin/ls" ]
 RUN ["/usr/bin/qemu-arm-static", "/bin/ls" ]
 
 RUN ["/usr/bin/qemu-arm-static", "apk update && apk --update add ruby ruby-irb ruby-io-console tzdata ca-certificates libcap" ]
