@@ -1,0 +1,12 @@
+image: andrewmiskell/alpine-mailgun:latest
+manifests:
+  -
+    image: andrewmiskell/alpine-mailgun:armhf
+    platform:
+      architecture: arm
+      os: linux
+  -
+    image: andrewmiskell/alpine-mailgun:amd64
+    platform:
+      architecture: amd64
+      os: linux
