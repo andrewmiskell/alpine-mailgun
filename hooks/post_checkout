@@ -1,1 +1,2 @@
-curl -L https://github.com/multiarch/qemu-user-static/releases/download/v3.1.0-2/qemu-arm-static && mv qemu-arm-static 
+#!/bin/bash
+curl -L https://github.com/multiarch/qemu-user-static/releases/download/v3.1.0-2/qemu-arm-static
