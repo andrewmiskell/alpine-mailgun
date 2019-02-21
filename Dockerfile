@@ -22,5 +22,3 @@ USER appuser
 WORKDIR /app
 
 EXPOSE 25
-
-CMD ["bundle", "exec", "ruby", "mail.rb"]
